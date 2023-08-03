@@ -42,11 +42,11 @@ exports[`renders  profile correctly 1`] = `
   <div
     className="listbox"
   >
-    <h2
-      className="listtitle"
+    <h3
+      className="listTitle"
     >
       My Missions
-    </h2>
+    </h3>
     <ul
       className="itemlist"
     />
@@ -54,11 +54,11 @@ exports[`renders  profile correctly 1`] = `
   <div
     className="listbox"
   >
-    <h2
-      className="listtitle"
+    <h3
+      className="listTitle"
     >
       My Rockets
-    </h2>
+    </h3>
     <ul
       className="itemlist"
     />
