@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'; // Import React
 import { useDispatch, useSelector } from 'react-redux';
+import { fetchRockets, setReserve } from '@rocketsSlice';
+import LoadingSpinner from '@LoadingR';
 import css from './Rockets.module.css';
-import { fetchRockets, setReserve } from '../redux/rockets/rocketsSlice';
-import LoadingSpinner from './LoadingR';
 
 function Rockets() { // Make sure this is a proper function component with React imported
   const dispatch = useDispatch();
