@@ -1,0 +1,45 @@
+.container {
+    display: flex;
+    width: 95vw;
+    margin: 10px auto;
+  }
+  
+  .imageContainer img {
+    height: 10rem;
+    width: 10rem;
+    margin: 15px;
+  }
+  
+  .title {
+    font-size: 24px;
+  }
+  
+  .desc {
+    font-size: 15px;
+  }
+  
+  .badge {
+    color: white;
+    background: rgb(98, 192, 98);
+    font-size: 10px;
+    padding: 2px;
+    border-radius: 5px;
+  }
+  
+  .reserve {
+    color: white;
+    background: rgb(25, 118, 225);
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    cursor: pointer;
+  }
+  
+  .cancelReservation {
+    color: grey;
+    padding: 5px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
