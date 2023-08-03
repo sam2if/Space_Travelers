@@ -6,7 +6,7 @@ import css from './Navbar.module.css';
 function Navbar() {
   return (
     <div>
-      <nav className={css.Navbar}>
+      <nav className={css.navbar}>
         <div className={css.logo}>
           <img src={planet} alt="planetLogo" />
           <h1>

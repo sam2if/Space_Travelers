@@ -1,13 +1,15 @@
 @keyframes spinner {
-    0% {
-      transform: rotate(0deg);
-    }
-  
-    100% {
-      transform: rotate(360deg);
-    }
+  0% {
+    transform: rotate(0deg);
   }
-  
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+
   .loading-spinner {
     position: fixed;
     top: 50%;
@@ -20,4 +22,4 @@
     border-radius: 50%;
     animation: spinner 1.5s linear infinite;
   }
-  
+   

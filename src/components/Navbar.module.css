@@ -1,4 +1,4 @@
-.Navbar {
+.navbar {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -36,7 +36,7 @@ li {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  color: rgb(61, 163, 237);
+  color: rgb(61 163 237);
   text-decoration: none;
 }
 
