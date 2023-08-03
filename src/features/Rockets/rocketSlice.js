@@ -27,11 +27,9 @@ export const rocketSlice = createSlice({
       state.rockets.forEach((rocket) => {
         if (rocket.rocket_id === action.payload) {
           temp.push({ ...rocket, reserved: !rocket.reserved });
-          // return { ...rocket, reserved: true };
         } else {
           temp.push(rocket);
         }
-        // return rocket;
       });
       return { ...state, rockets: temp };
     },
