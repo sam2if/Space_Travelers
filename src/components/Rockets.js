@@ -1,45 +1,40 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from 'react'; // Import React
 import { useDispatch, useSelector } from 'react-redux';
 import css from './Rockets.module.css';
 import { fetchRockets, setReserve } from '../redux/rockets/rocketsSlice';
 import LoadingSpinner from './LoadingR';
 
-function Rockets() {
+function Rockets() { // Make sure this is a proper function component with React imported
   const dispatch = useDispatch();
   const rockets = useSelector((state) => state.rockets.allRockets);
   const { loading } = useSelector((state) => state.rockets);
 
   useEffect(() => {
-    dispatch(fetchRockets());
-  }, [dispatch]);
+    if (rockets.length === 0) {
+      dispatch(fetchRockets());
+    }
+  }, [dispatch, rockets.length]);
 
   if (loading) {
-    return <LoadingSpinner />;
+    return <LoadingSpinner />; // Removed unnecessary Fragment here
   }
-
   return (
     <>
       {rockets.map((rocket) => (
-        <div key={rocket.id} className={css['rocket-container']}>
-          <div className={css['rocket-image-container']}>
+        <div key={rocket.id} className={css.container}>
+          <div className={css.imagecontainer}>
             <img src={rocket.flickr_images} alt="rocket" />
           </div>
-          <div className={css['rocket-info']}>
-            <p className={css['rocket-title']}>{rocket.name}</p>
-            <p className={css['rocket-desc']}>
-              {rocket.reserved && <span className={css['reserved-badge']}>Reserved</span>}
+          <div className={css.info}>
+            <p className={css.title}>{rocket.rocket_name}</p>
+            <p className={css.desc}>
+              {rocket.reserved ? <span className={css.badge}>Reserved</span> : ''}
+              {' '}
               {rocket.description}
             </p>
-
-            <button
-              type="button"
-              className={rocket.reserved ? css['cancel-reservation-button'] : css['reserve-button']}
-              onClick={() => {
-                dispatch(setReserve({ id: rocket.id, reserved: !rocket.reserved }));
-              }}
-            >
-              {rocket.reserved ? 'Cancel Reservation' : 'Reserve Rocket'}
-            </button>
+            {rocket.reserved
+              && <button type="button" className={css.cancelreservation} onClick={() => { dispatch(setReserve({ id: rocket.id, reserved: !rocket.reserved })); }}>Cancel Reservation</button>}
+            {!rocket.reserved && <button type="button" className={css.reserve} onClick={() => { dispatch(setReserve({ id: rocket.id, reserved: !rocket.reserved })); }}>Reserve Rocket</button>}
           </div>
         </div>
       ))}
