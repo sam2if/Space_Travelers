@@ -1,47 +1,47 @@
-.container {
+.rocket-container {
   display: flex;
-  width: 80vw;
+  align-items: center;
+  width: 93vw;
   margin: 10px auto;
 }
 
-.imagecontainer img {
+.rocket-image-container img {
   height: 12rem;
-  width: 15rem;
-  margin: 15px;
+  width: 12rem;
+  margin: 10px;
 }
 
-.title {
-  font-size: 24px;
-}
-
-.desc {
-  font-size: 15px;
-}
-
-.badge {
-  color: white;
-  background: rgb(2, 139, 121);
+.rocket-title {
   font-size: large;
-
 }
 
-.reserve {
+.rocket-desc {
+  font-size: large;
+}
+
+.reserved-badge {
   color: white;
-  background: rgb(11, 106, 214);
+  background: rgb(13 133 13);
+  font-size: large;
+  cursor: pointer;
+}
+
+.reserve-button {
+  color: white;
+  background: rgb(20 107 206);
   padding: 5px;
   border-radius: 5px;
-  border: 1px solid rgb(134, 130, 130);
+  border: 1px solid rgb(158 157 157);
   cursor: pointer;
-} 
+}
 
-.cancelreservation {
+.cancel-reservation-button {
   color: grey;
   padding: 5px;
   border: 1px solid lightgray;
   border-radius: 5px;
   cursor: pointer;
 }
-
 
 .loading-spinner {
   position: fixed;
