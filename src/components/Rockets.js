@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import css from './Rockets.module.css';
-import { fetchRockets } from '../redux/rockets/rocketsSlice';
+import { fetchRockets, setReserve } from '../redux/rockets/rocketsSlice';
 import LoadingSpinner from './LoadingR';
 
 function Rockets() {
@@ -31,7 +31,7 @@ function Rockets() {
               {rocket.description}
             </p>
 
-            {/* { <button
+            { <button
               type="button"
               className={rocket.reserved ? css.cancelReservation : css.reserve}
               onClick={() => {
@@ -39,7 +39,7 @@ function Rockets() {
               }}
             >
               {rocket.reserved ? 'Cancel Reservation' : 'Reserve Rocket'}
-            </button> } */}
+            </button> }
           </div>
         </div>
       ))}
