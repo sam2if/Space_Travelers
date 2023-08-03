@@ -21,24 +21,37 @@
 
 .reserved-badge {
   color: white;
-  background: rgb(13 133 13);
+  background: rgb(13, 133, 13);
   font-size: large;
   cursor: pointer;
 }
 
 .reserve-button {
   color: white;
-  background: rgb(20 107 206);
+  background: rgb(20, 107, 206);
   padding: 5px;
   border-radius: 5px;
-  border: 1px solid rgb(158 157 157);
+  border: 1px solid rgb(158, 157, 157);
   cursor: pointer;
 }
 
 .cancel-reservation-button {
   color: grey;
   padding: 5px;
-  border: 1px solid rgb(75 74 74);
+  border: 1px solid lightgray;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.loading-spinner {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  border: 10px solid #f3f3f3;
+  border-top: 10px solid #376cb1;
+  border-radius: 50%;
+  animation: spinner 1.5s linear infinite;
 }
