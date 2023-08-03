@@ -38,19 +38,7 @@
 .cancel-reservation-button {
   color: grey;
   padding: 5px;
-  border: 1px solid lightgray;
+  border: 1px solid rgb(75 74 74);
   border-radius: 5px;
   cursor: pointer;
-}
-
-.loading-spinner {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100px;
-  height: 100px;
-  border: 10px solid #f3f3f3;
-  border-top: 10px solid #376cb1;
-  border-radius: 50%;
 }
