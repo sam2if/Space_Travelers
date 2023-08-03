@@ -20,26 +20,26 @@ function Rockets() {
   return (
     <>
       {rockets.map((rocket) => (
-        <div key={rocket.id} className={css.container}>
-          <div className={css.imageContainer}>
+        <div key={rocket.id} className={css.rocketContainer}>
+          <div className={css.rocketImageContainer}>
             <img src={rocket.flickr_images} alt="rocket" />
           </div>
-          <div className={css.info}>
-            <p className={css.title}>{rocket.name}</p>
-            <p className={css.desc}>
-              {rocket.reserved && <span className={css.badge}>Reserved</span>}
+          <div className={css.rocketInfo}>
+            <p className={css.rocketTitle}>{rocket.name}</p>
+            <p className={css.rocketDesc}>
+              {rocket.reserved && <span className={css.reservedBadge}>Reserved</span>}
               {rocket.description}
             </p>
 
-            { <button
+            <button
               type="button"
-              className={rocket.reserved ? css.cancelReservation : css.reserve}
+              className={rocket.reserved ? css.cancelReservationButton : css.reserveButton}
               onClick={() => {
                 dispatch(setReserve({ id: rocket.id, reserved: !rocket.reserved }));
               }}
             >
               {rocket.reserved ? 'Cancel Reservation' : 'Reserve Rocket'}
-            </button> }
+            </button>
           </div>
         </div>
       ))}
